@@ -2,7 +2,7 @@
 This is the official code for FeTrIL (WACV2022): Feature Translation for Exemplar-Free Class-Incremental Learning
 
 <p align="center">
-<img src="medias/teaser.png" height="300px"/>
+<img src="medias/teaser.png" />
 </p>
 
 ```
