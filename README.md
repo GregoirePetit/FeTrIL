@@ -17,7 +17,7 @@ python codes/eval.py configs/cifar100_b50_t10.cf
 ## Citation
 If you find this code useful for your research, please cite our paper:
 ```
-@inproceedings{wang2022feature,
+@inproceedings{petit2022fetril,
   title={FeTrIL: Feature Translation for Exemplar-Free Class-Incremental Learning},
   author={Petit, Popescu, Schindler, Picard, Delezoide},
   booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
