@@ -1,10 +1,17 @@
 [config]
-nb_classes       = 100
-dataset          = cifar100
-first_batch_size = 50
-il_states        = 10
-regul            = 1.0
-toler            = 0.0001
-feat_root        = data/features
-classifiers_root = data/classifiers
-pred_root        = data/predictions
+nb_classes        = 100
+dataset           = cifar100
+first_batch_size  = 50
+il_states         = 10
+random_seed       = -1
+num_workers       = 12
+regul             = 1.0
+toler             = 0.0001
+epochs_lucir      = 90
+epochs_augmix_ft  = 290
+list_root         = data/list
+model_root        = data/model
+feat_root         = data/features
+classifiers_root  = data/classifiers
+pred_root         = data/predictions
+mean_std          = data/datasets_mean_std
