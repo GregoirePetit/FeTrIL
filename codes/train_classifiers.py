@@ -19,6 +19,7 @@ with open(sys.argv[1]) as fh:
 cp = cp['config']
 regul = float(cp["regul"])
 toler = float(cp["toler"])
+random_seed = int(cp["random_seed"])
 nb_classes = int(cp['nb_classes'])
 dataset = cp['dataset']
 first_batch_size = int(cp["first_batch_size"])
@@ -50,8 +51,8 @@ def normalize_train_features(il_dir,state_id,state_size):
 if __name__ == '__main__':
     for state_id in range(il_states+1):
         print("Training state",state_id, "of", il_states)
-        il_dir = os.path.join(feat_root,"fetril",dataset,"b"+str(first_batch_size),"t"+str(il_states),"train","batch"+str(state_id))
-        classifiers_dir = os.path.join(classifiers_root,"fetril",dataset,"b"+str(first_batch_size),"t"+str(il_states),"batch"+str(state_id))
+        il_dir = os.path.join(feat_root,"fetril",dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"t"+str(il_states),"train","batch"+str(state_id))
+        classifiers_dir = os.path.join(classifiers_root,"fetril",dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"t"+str(il_states),"batch"+str(state_id))
         min_pos = 0
         max_pos = first_batch_size + (state_id) * incr_batch_size
         state_size = first_batch_size

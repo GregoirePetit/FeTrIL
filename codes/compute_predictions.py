@@ -18,13 +18,14 @@ nb_classes = int(cp['nb_classes'])
 dataset = cp['dataset']
 first_batch_size = int(cp["first_batch_size"])
 il_states = int(cp["il_states"])
+random_seed = int(cp["random_seed"])
 feat_root = cp["feat_root"]
 pred_root = cp["pred_root"]
 classifiers_root = cp["classifiers_root"]
 
-test_feats_path = os.path.join(feat_root,dataset,"b"+str(first_batch_size),"test/")
-svms_dir = os.path.join(classifiers_root,"fetril",dataset,"b"+str(first_batch_size),"t"+str(il_states))
-pred_path = os.path.join(pred_root,"fetril",dataset,"b"+str(first_batch_size),"t"+str(il_states))
+test_feats_path = os.path.join(feat_root,dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"test/")
+svms_dir = os.path.join(classifiers_root,"fetril",dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"t"+str(il_states))
+pred_path = os.path.join(pred_root,"fetril",dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"t"+str(il_states))
 model_dir = svms_dir
 os.makedirs(pred_path, exist_ok=True)
 T = il_states

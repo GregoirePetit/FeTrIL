@@ -16,13 +16,14 @@ with open(sys.argv[1]) as fh:
 cp = cp['config']
 nb_classes = int(cp['nb_classes'])
 dataset = cp['dataset']
+random_seed = int(cp["random_seed"])
 feat_root = cp['feat_root']
 il_states = int(cp['il_states'])
 first_batch_size = int(cp['first_batch_size'])
 t = il_states
 
-train_data_path = os.path.join(feat_root,dataset,"b"+str(first_batch_size),"train/")
-train_data_path_lucir = os.path.join(feat_root,"fetril",dataset,"b"+str(first_batch_size),"t"+str(il_states),"train/")
+train_data_path = os.path.join(feat_root,dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"train/")
+train_data_path_lucir = os.path.join(feat_root,"fetril",dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"t"+str(il_states),"train/")
 
 batch_size = (nb_classes-first_batch_size)//t
 

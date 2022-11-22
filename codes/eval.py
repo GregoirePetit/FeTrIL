@@ -18,11 +18,12 @@ nb_classes = int(cp['nb_classes'])
 dataset = cp['dataset']
 first_batch_size = int(cp["first_batch_size"])
 il_states = int(cp["il_states"])
+random_seed = int(cp["random_seed"])
 feat_root = cp["feat_root"]
 pred_root = cp["pred_root"]
 classifiers_root = cp["classifiers_root"]
 t = il_states
-root_path_pred = os.path.join(pred_root,"fetril",dataset,"b"+str(first_batch_size),"t"+str(il_states))
+root_path_pred = os.path.join(pred_root,"fetril",dataset,"seed"+str(random_seed),"b"+str(first_batch_size),"t"+str(il_states))
 
 batch_size = (nb_classes-first_batch_size)//il_states
 
