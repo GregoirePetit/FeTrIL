@@ -25,6 +25,7 @@ Exemplar-free class-incremental learning is very challenging due to the negative
 | SSRE$^*$~\cite{zhu2022self} \small (CVPR'22)              | 65.9             | <ins>65.0</ins> | **61.7**      | x                |   | {50.4}           | {48.9}           | {48.2}            | x                |   | -                | {67.7}           | -                | x                |   | -                | -                | -                |
 | \ourmodeloneFc                                            | 64.7             | 63.4             | 57.4             | <ins>50.8</ins> |   | <ins>52.9</ins> | <ins>51.7</ins> | <ins>49.7</ins> | <ins>41.9</ins> |   | <ins>69.6</ins> | <ins>68.9</ins> | <ins>62.5</ins> | <ins>58.9</ins> |   | <ins>65.6</ins> | <ins>64.4</ins> | <ins>63.4</ins> |
 | \ourmodelone                                              | **66.3**    | **65.2**    | <ins>61.5</ins> | **59.8**    |   | **54.8**    | **53.1**    | **52.2**     | **50.2**    |   | **72.2**    | **71.2**    | **67.1**    | **65.4**    |   | **66.1**    | **65.0**    | **63.8**    |
+
 Average top-1 incremental accuracy in EFCIL with different numbers of incremental steps. FeTrIL results are reported with pseudo-features translated from the most similar new class.	"-" cells indicate that results were not available (see supp. material for details). "x" cells indicate that the configuration is impossible for that method. 
 
 ## Installation
