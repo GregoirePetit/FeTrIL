@@ -1,11 +1,13 @@
-from configparser import ConfigParser
+from multiprocessing import Pool
 import torch
 import sys
 import os
 from sklearn.svm import LinearSVC
+from configparser import ConfigParser
 import numpy as np
 import pandas as pd
-from multiprocessing import Pool
+
+sys.path.insert(0,os.path.join(os.path.expanduser('~'),'utilsCIL'))
 from MyFeatureFolder import L4FeaturesDataset
 
 

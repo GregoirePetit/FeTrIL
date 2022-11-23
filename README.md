@@ -7,12 +7,35 @@ This is the official code for [FeTrIL](https://gregoirepetit.github.io/projects/
 
 ## Abstract
 
+Exemplar-free class-incremental learning is very challenging due to the negative effect of catastrophic forgetting. A balance between stability and plasticity of the incremental process is needed in order to obtain good accuracy for past as well as new classes. Existing exemplar-free class-incremental methods focus either on successive fine tuning of the model, thus favoring plasticity, or on using a feature extractor fixed after the initial incremental state, thus favoring stability. We introduce a method which combines a fixed feature extractor and a pseudo-features generator to improve the stability-plasticity balance. The generator uses a simple yet effective geometric translation of new class features to create representations of past classes, made of pseudo-features. The translation of features only requires the storage of the centroid representations of past classes to produce their pseudo-features. Actual features of new classes and pseudo-features of past classes are fed into a linear classifier which is trained incrementally to discriminate between all classes. The incremental process is much faster with the proposed method compared to mainstream ones which update the entire deep model. Experiments are performed with three challenging datasets, and different incremental settings. A comparison with ten existing methods shows that our method outperforms the others in most cases.
+
 ## Installation
 
-To install the required package, please run the following command (conda is required):
+### Environment
+
+To install the required packages, please run the following command (conda is required), using [fetril.yml](fetril.yml) file:
 
 ```bash
 conda env create -f fetril.yml
+```
+
+If the installation fails, please try to install the packages manually with the following command:
+
+```bash
+conda create -n fetril python=3.7
+conda activate fetril
+conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+pip install typing-extensions --upgrade
+conda install pandas
+pip install -U scikit-learn scipy matplotlib
+```
+
+### Dependencies
+
+The code depends on the repository [utilsCIL](https://github.com/GregoirePetit/utilsCIL) which contains the code for the datasets and the incremental learning process. Please clone the repository on your home ([FeTrIL code](https://github.com/GregoirePetit/FeTrIL/blob/main/codes/scratch.py#L19) will find it) or add it to your PYTHONPATH:
+
+```bash
+git clone git@github.com:GregoirePetit/utilsCIL.git
 ```
 
 ## Usage
