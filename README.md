@@ -11,6 +11,7 @@ Exemplar-free class-incremental learning is very challenging due to the negative
 
 ## Results
 
+For the following results *T* denominates the number of incremental states. The first, non-incremental, state contains half of the classes, excepted the *T=20* and *T=60* setups for the 100-classes datasets, where it accounts for 40 classes. Whenever available, results of compared methods marked with ∗ are reproduced either from their initial paper or from [SSRE](https://arxiv.org/abs/2203.06359) for EFCIL. The other results are recomputed using the original configurations of the methods.
 
 ### CIFAR-100
 | **CIL Method** | *T=5* | *T=10* | *T=20* | *T=60* |
@@ -32,7 +33,7 @@ Average top-1 incremental accuracy in EFCIL with different numbers of incrementa
 
 
 ### Tiny-ImageNet
-| **CIL Method** | *T=5* | *T=10* | *T=20* | *T=60* |
+| **CIL Method** | *T=5* | *T=10* | *T=20* | *T=100* |
 |----------------|-------|--------|--------|--------|
 | [EWC*](https://www.pnas.org/doi/10.1073/pnas.1611835114) (PNAS'17) | 18.8 | 15.8 | 12.4 | x | - | 20.4 | - | x | - | - | - |
 | [LwF-MC*](https://openaccess.thecvf.com/content_cvpr_2017/papers/Rebuffi_iCaRL_Incremental_Classifier_CVPR_2017_paper.pdf) (CVPR'17)| 29.1 | 23.1 | 17.4 | x | - | 31.2 | - | x | - | - | - |
