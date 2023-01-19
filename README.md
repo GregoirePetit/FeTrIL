@@ -169,10 +169,12 @@ python codes/eval.py configs/cifar100_b50_t10.cf
 If you find this code useful for your research, please cite our paper:
 
 ```BibTeX
-@article{petit2023fetril, 
- Title = {FeTrIL: Feature Translation for Exemplar-Free Class-Incremental Learning}, 
- Author = {G. Petit, A. Popescu, H. Schindler, D. Picard, B. Delezoide}, 
- Journal = {Winter Conference on Applications of Computer Vision (WACV)}, 
- Year = {2023}
+@InProceedings{Petit_2023_WACV,
+    author    = {Petit, Gr\'egoire and Popescu, Adrian and Schindler, Hugo and Picard, David and Delezoide, Bertrand},
+    title     = {FeTrIL: Feature Translation for Exemplar-Free Class-Incremental Learning},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2023},
+    pages     = {3911-3920}
 }
 ```
