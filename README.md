@@ -135,6 +135,11 @@ Using the [configs/cifar100_b50_t10.cf](https://github.com/GregoirePetit/FeTrIL/
 
 Once the configuration file is ready, you can run the following command to launch the experiment:
 
+#### Train the first model and extract the features:
+```bash
+python codes/scratch.py configs/cifar100_b50_t10.cf
+```
+
 #### Compute the pseudo-features according to the FeTrIL method:
 ```bash
 python codes/compute_distances.py configs/cifar100_b50_t10.cf
